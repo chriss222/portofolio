@@ -1,13 +1,94 @@
-import { SelectedPage } from '@/shared/types'
-import React from 'react'
+import { SelectedPage } from '@/shared/types';
+import React from 'react';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { motion } from "framer-motion";
+import dalle from "../../assets/dalle.png";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Socials from '../socials';
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
 }
 
 const LandingPage = ({ setSelectedPage }: Props) => {
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+
     return (
-        <div>LandingPage</div>
+        <section id="home" className='md:h-screen py-10 md:flex md:items-center'>
+            <motion.div className='md:flex md:justify-between md:items-center gap-16 py-10' onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
+                <div className='md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32'>
+                    {isAboveMediumScreens ? (
+                        <div className='relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1] hover:before:opacity-0 before:duration-500'> 
+                            <img className='max-w-[400px] max-h-[400px]' src={dalle} />
+                            <div className='absolute top-0 left-0 w-full flex flex-col h-full justify-center items-center bg-slate-500 opacity-0 hover:h-full hover:opacity-50 duration-500'>
+                                <h1 className='text-2xl text-red'>DALL-E</h1>
+                            </div>
+                        </div>
+                    ) : (
+                        <img src={dalle} />
+                    )}
+                </div>
+                <div className='z-30 basis-2/5 mt-12 md:mt-32'>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            hidden: { opacity: 0, x: -50 },
+                            visible: { opacity: 1, x: 0 }
+                        }}
+                    >
+                        <p className='text-3xl z-10 md:text-start'>
+                            cccccccc {""}
+                            <span className='xs:relative font-semibold z-20 px-10'>mmmm</span>
+                        </p>
+                        <p className='mt-10 mb-7 text-sm text-center md:text-start'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Cras pulvinar mattis nunc sed. Sem viverra aliquet eget sit. Dui id ornare arcu odio ut sem nulla pharetra diam.
+                        </p>
+                    </motion.div> 
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            hidden: { opacity: 0, x: -50 },
+                            visible: { opacity: 1, x: 0 }
+                        }}
+                        className='flex'
+                    >
+                        <AnchorLink
+                            className='bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500'
+                            onClick={() => setSelectedPage(SelectedPage.Contact)}
+                        >
+                            Contact Me <span>📞</span>
+                        </AnchorLink>
+                        <AnchorLink
+                            className='rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5'
+                            onClick={() => setSelectedPage(SelectedPage.Contact)}
+                        >
+                            <div className='bg-deep-blue hover:text-red transition duration-500 rounded-r-sm w-full h-full flex items-center justify-center px-10'>
+                                Let's talk.
+                            </div>
+                        </AnchorLink>
+                    </motion.div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            hidden: { opacity: 0, x: -50 },
+                            visible: { opacity: 1, x: 0 }
+                        }}
+                    >
+                        <Socials />
+                    </motion.div>                 
+                </div>
+            </motion.div>
+        </section>
     )
 }
 

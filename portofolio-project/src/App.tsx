@@ -4,6 +4,8 @@ import { SelectedPage } from './shared/types';
 import Navbar from './components/navbar';
 import Scroll from './components/scroll';
 import LandingPage from './components/landingPage';
+import Skills from './components/skills';
+import Projects from './components/projects';
 
 function App() {
     const [selectedPage, setSelectedPage] = useState(SelectedPage.Home);
@@ -21,7 +23,7 @@ function App() {
     }, [])
 
     return (
-        <div className="app bg-deep-blue">
+        <div className="min-h-full w-full app bg-deep-blue">
             <Navbar 
                 isTopOfPage={isTopOfPage}
                 selectedPage={selectedPage}
@@ -38,6 +40,8 @@ function App() {
                     setSelectedPage={setSelectedPage}
                 />
             </div>
+            <Skills setSelectedPage={setSelectedPage} />
+            <Projects setSelectedPage={setSelectedPage} />
         </div>
     )
 }
