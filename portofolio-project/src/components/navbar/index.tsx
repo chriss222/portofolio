@@ -15,7 +15,7 @@ type Props = {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-    const navbarBackground = isTopOfPage ? "" : "bg-red";
+    const navbarBackground = isTopOfPage ? "" : "bg-footer-gradient";
 
     return (
         <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
@@ -24,7 +24,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
                 {/* DESKTOP */}
                 {isAboveSmallScreens ? (
-                    <div className='flex justify-between gap-16 text-sm font-semibold'>
+                    <div className='flex justify-between gap-16 text-md font-semibold'>
                         {navLinks.map((link: string, i: number) => (
                             <Link 
                                 key={i}

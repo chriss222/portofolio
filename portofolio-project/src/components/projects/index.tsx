@@ -11,7 +11,7 @@ type Props = {
 
 const Projects = ({ setSelectedPage }: Props) => {
     return (
-        <section id="projects" className='pt-28 pb-48'>
+        <section id="projects" className='pt-28 pb-12 md:min-h-screen mb-12'>
             <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}>
                 <motion.div
                         initial="hidden"
@@ -53,7 +53,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                     >
                         <img className='h-[250px] w-[250px] xs:mx-auto' src={gym} />
                         <div className='absolute top-0 left-0 w-full flex flex-col rounded-md h-full justify-center items-center bg-slate-500 opacity-0 hover:h-full hover:opacity-90 duration-500'>
-                            <a className='text-2xl text-lighter-blue' href='www.google.com'>GYM WEBSITE</a>
+                            <a className='text-2xl text-lighter-blue font-bold' href='www.google.com'>GYM WEBSITE</a>
                         </div>
                     </motion.div>
                     <motion.div 
@@ -72,7 +72,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                     >
                         <img className='h-[250px] w-[250px] xs:mx-auto' src={tictac} />
                         <div className='absolute top-0 left-0 w-full flex flex-col h-full rounded-md  justify-center items-center bg-slate-500 opacity-0 hover:h-full hover:opacity-90 duration-500'>
-                            <h1 className='text-2xl text-lighter-blue'>TASK APP</h1>
+                            <a className='text-2xl text-lighter-blue font-bold'>TASK APP</a>
                         </div>
                     </motion.div>
                     <motion.div 
@@ -91,7 +91,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                     >
                         <img className='h-[250px] w-[250px] xs:mx-auto' src={cards} />
                         <div className='absolute top-0 left-0 w-full flex flex-col h-full rounded-md justify-center items-center bg-slate-500 opacity-0 hover:h-full hover:opacity-90 duration-500'>
-                            <button className='text-2xl text-lighter-blue'>CARD GAME</button>
+                            <a className='text-2xl text-lighter-blue font-bold'>CARD GAME</a>
                         </div>
                     </motion.div>
                 </motion.div>

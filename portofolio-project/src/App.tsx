@@ -6,6 +6,8 @@ import Scroll from './components/scroll';
 import LandingPage from './components/landingPage';
 import Skills from './components/skills';
 import Projects from './components/projects';
+import Contact from './components/contact';
+import Footer from './components/footer';
 
 function App() {
     const [selectedPage, setSelectedPage] = useState(SelectedPage.Home);
@@ -23,7 +25,7 @@ function App() {
     }, [])
 
     return (
-        <div className="min-h-full w-full app bg-deep-blue">
+        <div className="min-h-full w-full app bg-deep-blue box-border">
             <Navbar 
                 isTopOfPage={isTopOfPage}
                 selectedPage={selectedPage}
@@ -37,11 +39,14 @@ function App() {
                     />
                 )}
                 <LandingPage 
+                    selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                 />
             </div>
             <Skills setSelectedPage={setSelectedPage} />
             <Projects setSelectedPage={setSelectedPage} />
+            <Contact  setSelectedPage={setSelectedPage} />
+            <Footer />
         </div>
     )
 }
