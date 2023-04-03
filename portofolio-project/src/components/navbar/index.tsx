@@ -3,6 +3,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { SelectedPage } from '@/shared/types';
 import Link from './Link';
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const navLinks: Array<string> = ["Home", "Skills", "Projects", "Contact"];
 
@@ -20,7 +21,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     return (
         <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
             <div className='flex items-center justify-between mx-auto w-5/6'>
-                <h4 className='inline text-3xl font-bold'>ddddddd</h4>
+                <AnchorLink 
+                    className='inline text-lg font-bold p-2 bg-orange-500 border-2 border-orange-500 rounded-full text-white'
+                    href={`#${SelectedPage.Home}`}
+                    onClick={() => setSelectedPage(SelectedPage.Home)}
+                >
+                    CM
+                </AnchorLink>
 
                 {/* DESKTOP */}
                 {isAboveSmallScreens ? (
@@ -40,6 +47,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     </button>
                 )}
 
+                {/* MOBILE */}
                 {!isAboveSmallScreens && isMenuToggled && (
                     <div className='fixed right-0 bottom-0 h-full bg-blue w-[300px]'>
                         <div className='flex justify-end p-12'>

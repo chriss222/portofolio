@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import dalle from "../../assets/dalle.png";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Socials from '../socials';
+import Splash from '../../assets/splash.png';
 
 type Props = {
     selectedPage: SelectedPage;
@@ -15,9 +16,9 @@ const LandingPage = ({ selectedPage, setSelectedPage }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
     return (
-        <section id="home" className='md:h-screen py-10 md:flex md:items-center'>
+        <section id="home" className='md:h-full py-16 md:flex md:items-center'>
             <motion.div className='md:flex md:justify-between md:items-center gap-16 py-10' onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
-                <div className='md:order-1 flex justify-center basis-3/5 z-10 mt-16 md:mt-32'>
+                <div className='md:order-1 flex justify-center basis-3/4 z-10 mt-16 md:mt-32'>
                     {isAboveMediumScreens ? (
                         <div className='relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1] hover:before:opacity-0 before:duration-500'> 
                             <img className='max-w-[400px] max-h-[400px]' src={dalle} />
@@ -30,7 +31,7 @@ const LandingPage = ({ selectedPage, setSelectedPage }: Props) => {
                         <img src={dalle} />
                     )}
                 </div>
-                <div className='z-30 basis-2/5 mt-12 md:mt-32'>
+                <div className='z-30 basis-1/4 mt-12 md:mt-32'>
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -41,16 +42,15 @@ const LandingPage = ({ selectedPage, setSelectedPage }: Props) => {
                             visible: { opacity: 1, x: 0 }
                         }}
                     >   
-                        <div>
-                            <p className='text-4xl font-semibold z-10 md:text-start'>
-                                cccccccc {""}
-                                <span className='xs:relative font-semibold z-20 px-5'>mmmm</span>
-                            </p>
-                            <p className='mt-10 mb-7 text-sm text-center md:text-start'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Cras pulvinar mattis nunc sed. Sem viverra aliquet eget sit. Dui id ornare arcu odio ut sem nulla pharetra diam.
-                            </p>
-                        </div>
+                        <p className='relative text-4xl font-semibold z-10 md:text-start'>
+                            Cristian {""}
+                            <span className='xs:relative font-semibold z-20 px-5'>Mitu</span>
+                            <img className='absolute h-[160px] w-[200px] bg-splash z-[-1] -top-16 -left-8' src={Splash} />
+                        </p>
+                        <p className='mt-10 mb-7 text-sm text-center md:text-start'>
+                            Welcome to my personal webpage! I am a front-end developer with a passion for creating beautiful and functional web interfaces.
+                            I am equipped with the necessary skills to bring your digital designs to life. From developing interactive websites to building complex web applications, I am dedicated to providing an exceptional user experience.
+                        </p>
                     </motion.div> 
                     <motion.div
                         initial="hidden"

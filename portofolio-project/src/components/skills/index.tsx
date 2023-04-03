@@ -9,7 +9,7 @@ type Props = {
 
 const Skills = ({ setSelectedPage }: Props) => {
     return (
-        <section id="skills" className='py-16 bg-deep-blue h-full md:flex flex-col justify-center'>
+        <section id="skills" className='py-16 md:my-56 bg-deep-blue h-full md:flex flex-col justify-center'>
             <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}></motion.div>
                 <div className='w-5/6 mx-auto text-center m-10'>
                     <motion.div
@@ -44,9 +44,11 @@ const Skills = ({ setSelectedPage }: Props) => {
                             </div>
                             <div className='w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-10' />
                         </div>
-                        <p className='mt-5'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Tortor condimentum lacinia quis vel eros. Lacus sed viverra tellus in hac habitasse platea.
+                        <p className='mt-8'>
+                            My journey as a front-end developer began in my final year of university, where I developed JavaScript games. 
+                            This experience allowed me to hone my coding skills and develop a deep understanding of the language. 
+                            After graduation, I was promoted to a web developer role, where I started working with React, a popular JavaScript library used for building user interfaces. 
+                            Through my experience, I have gained a strong foundation in front-end development and am constantly learning new technologies to enhance my skills.
                         </p>
                     </motion.div>
                     <motion.div
@@ -67,9 +69,10 @@ const Skills = ({ setSelectedPage }: Props) => {
                             </div>
                             <div className='w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-10' />
                         </div>
-                        <p className='mt-5'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Tortor condimentum lacinia quis vel eros. Lacus sed viverra tellus in hac habitasse platea.
+                        <p className='mt-8'>
+                            As a front-end developer, I am proficient in using HTML, CSS, and JavaScript to build interactive and responsive websites. 
+                            I have also worked with React and Redux, which are popular JavaScript frameworks used for building complex web applications. 
+                            In addition, I have experience working with WordPress, a popular content management system, and Tailwind, a utility-first CSS framework that allows for faster and more efficient styling. 
                         </p>
                     </motion.div>
                     <motion.div
@@ -90,9 +93,10 @@ const Skills = ({ setSelectedPage }: Props) => {
                             </div>
                             <div className='w-1/2 md:w-3/4 h-32 bg-purple-800 absolute right-0 top-0 z-10' />
                         </div>
-                        <p className='mt-5'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Tortor condimentum lacinia quis vel eros. Lacus sed viverra tellus in hac habitasse platea.
+                        <p className='mt-8'>
+                            My motivation for pursuing a career in front-end development is rooted in my passion for design and technology. 
+                            Additionally, the constantly evolving nature of web technologies and the opportunity to work on a variety of projects makes this field both challenging and exciting. 
+                            I am drawn to the idea of being able to continuously learn and develop my skills as a front-end developer, while making a meaningful impact on the digital world.
                         </p>
                     </motion.div>
                 </div>
