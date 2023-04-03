@@ -24,7 +24,7 @@ const LandingPage = ({ selectedPage, setSelectedPage }: Props) => {
                             <img className='max-w-[400px] max-h-[400px]' src={dalle} />
                             <div className='absolute top-0 left-0 w-full flex flex-col h-full justify-center items-center bg-slate-500 opacity-0 hover:h-full hover:opacity-70 duration-500'>
                                 <h1 className='text-2xl text-red font-extrabold'>DALL-E</h1>
-                                <p className='text-center text-xl text-pink-700 pt-8 font-medium italic'>"An A.I. controlled robot, in a cyberpunk style city, working on a personal project, at night."</p>
+                                <p className='text-center text-xl text-pink-700 pt-8 font-medium italic px-2'>"An A.I. controlled robot, in a cyberpunk style city, working on a personal project, at night."</p>
                             </div>
                         </div>
                     ) : (

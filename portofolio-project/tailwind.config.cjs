@@ -22,6 +22,7 @@ module.exports = {
             "gradient-rainblue":
             "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
             "board-gradient": "linear-gradient(90deg, rgba(1,0,38,1) 0%, rgba(2,2,128,1) 40%, rgba(1,0,38,1) 100%)",
+            "footer-gradient": "linear-gradient(90deg, rgba(2,1,29,1) 0%, rgba(148,18,75,1) 55%, rgba(19,7,16,1) 100%)"
         }),
         boxShadow: {
             'custom-right': "11px -5px 20px 5px rgba(29,35,125,0.7)",
