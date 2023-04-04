@@ -53,7 +53,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                     >
                         <img className='h-[250px] w-[250px] xs:mx-auto' src={gym} />
                         <div className='absolute top-0 left-0 w-full flex flex-col rounded-md h-full justify-center items-center bg-slate-500 opacity-0 hover:h-full hover:opacity-90 duration-500'>
-                            <a className='text-2xl text-lighter-blue font-bold' href='www.google.com'>GYM WEBSITE</a>
+                            <a className='text-2xl text-lighter-blue font-bold' href='https://gymproject-eq2.pages.dev/'>GYM WEBSITE</a>
                         </div>
                     </motion.div>
                     <motion.div 
@@ -72,7 +72,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                     >
                         <img className='h-[250px] w-[250px] xs:mx-auto' src={tictac} />
                         <div className='absolute top-0 left-0 w-full flex flex-col h-full rounded-md  justify-center items-center bg-slate-500 opacity-0 hover:h-full hover:opacity-90 duration-500'>
-                            <a className='text-2xl text-lighter-blue font-bold'>TASK APP</a>
+                            <a className='text-2xl text-lighter-blue font-bold' href='https://codesandbox.io/s/github/chriss222/ReactTS-taskApp'>TASK APP</a>
                         </div>
                     </motion.div>
                     <motion.div 
@@ -91,7 +91,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                     >
                         <img className='h-[250px] w-[250px] xs:mx-auto' src={cards} />
                         <div className='absolute top-0 left-0 w-full flex flex-col h-full rounded-md justify-center items-center bg-slate-500 opacity-0 hover:h-full hover:opacity-90 duration-500'>
-                            <a className='text-2xl text-lighter-blue font-bold'>CARD GAME</a>
+                            <a className='text-2xl text-lighter-blue font-bold' href='https://codesandbox.io/s/github/chriss222/card-game'>CARD GAME</a>
                         </div>
                     </motion.div>
                 </motion.div>
